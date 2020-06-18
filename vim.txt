@@ -1,0 +1,104 @@
+vim Commands:-
+(Basics)
+
+:w <- to save file.
+:q <- to quit(or exit from the vim).
+:wq <- to save and quit.
+:x <- save and exit from the vim.
+:q! <- quit without saving.
+:nu <- displays cursors line number.
+:<number>  <- cursor moves to that line number which is mentioned in <number>
+           eg:-  :5  <- cursor moves to 5th line number.
+                 :20 <- cursor moves to 20th line number.
+:set nu to display line numbers.
+
+Working:-
+There are three modes of vim:-
+1) Normal Mode.
+2) Insert Mode.
+3) Visual Mode
+
+1) Normal Mode.
+This mode is default meaning, when you open a file(vim file.java), initially
+vim is in normal mode.
+
+In normal mode you can not type into the file.
+
+In normal mode you are only allowed to give commands to vim.
+(Commands of vim are listed above)
+
+Following is the scenarios only applicable when you are in the normal mode:-
+
+a) To copy single line:-
+   hit: "yy", then move cursor position where you want to paste and then hit: "p"
+b) To copy multiple lines:-
+   hit: "<number>y + arrow key(up arrow or down arrow)"
+   eg:-
+       1) let's say you want to copy above 3 lines from your current cursor. 
+       hit: 3y and then up arrow key. Move your cursor where you wanted to paste and then hit: "p"
+       2) let's say you want to copy 3 lines below from your current cursor. 
+       hit: 3y and then down arrow key. Move your cursor where you wanted to paste and then hit: "p"
+c) Deletion is similar to copy. I'll leave it for you to try it out.
+
+2) Insert Mode:-
+This mode is where you can write into file.
+
+Following are the ways to get into insert mode:-
+a) i <- insert mode activated from the current cursor position.
+b) a <- append cursor to next coloumn and then insert mode is activated.
+
+Note:-
+If you are in the insert mode then to go back to command mode hit "escape button"
+Note: Insert mode can be entered only from Normal mode and not from visual mode.
+
+Now,
+To keep it simple I won't talk much about visual mode, allthough I will give little bit glimpse about it.
+So,
+3) Visual mode:-
+Note: Visual mode can be entered only from Normal mode and not from insert mode.
+There are various ways to enter into visual mode:-
+1) hit: "v"
+2) hit: shift + "v"
+3) hit: ctrl + "v"
+(I will not give the explaniation of this you try it because it is self explainatory.).
+To exit from the visual mode hit "escape button"(after exit, vim will enter into normal mode).
+eg:-
+//file contents
+Hello What's up
+//suppose i want to copy "What's" word and placed into next line.
+//so, hit: "escape button" to make sure you are in normal mode.
+// now move cursor to "W" and hit: "v"
+// then select What's word which will be highlighted and then hit: "y"
+// go to insert mode for next line---hit: "escape button"----hit: "p".
+// Now, file will look like
+Hello What's up
+What's
+
+// Deletion is same as above. I'll leave it for you to check it out.
+
+following is the overall example:-
+$ vim hello.java
+
+<hit "i" to enter into insert mode and type following>
+class Hello {
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+
+<hit "escape button" to enter into command mode and then hit ":w" to save file>
+<now hit ":q" to exit from the vim>
+
+$
+
+There are number of ways to exit from vim:-
+First of all enter into command mode.
+1) :wq
+2) :w and then :q
+3) :x
+
+** Note that this is very short tutorial on vim. Actually, theres a lot going on inside the vim, various options.
+   This will be enough for the current coding. **
+
+Happy Coding!
+Sanket Puthane
