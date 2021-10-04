@@ -3,10 +3,10 @@ class Flat{
     int mob=10;
     static int tv=20;
 
-    static{
+    static {
             System.out.println(" \n\nIt will run first");
-
-   }
+            System.out.println(tv);
+    }
 
   Flat(){
 

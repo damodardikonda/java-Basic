@@ -14,8 +14,7 @@ class Char_Switch{
 			   System.out.println(" A char");
 			   break;
 
-			case 'B':
-			   System.out.println(" B char");
+			case 'B': 
 			   break;
 
 

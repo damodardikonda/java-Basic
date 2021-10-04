@@ -23,11 +23,4 @@ static public void main(String args[]){
         Lockdown obj = new Lockdown();
         System.out.println("heeyyyyyyyyyyyyyyyy");
 }
-
-
-
-
-
-
-
 }
